@@ -87,7 +87,7 @@ class LoginUI(QWidget):
                 for line in f:
                     user_fields = line.split(" ")
                     username = user_fields[0]
-                    password = user_fields[1].strip('\n')
+                    password = user_fields[-1].strip('\n')
                     users[username] = password
         except FileNotFoundError:
             print("The file does not exist. Creating a new file.")
